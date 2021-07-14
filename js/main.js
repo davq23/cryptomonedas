@@ -74,8 +74,6 @@ if (document.getElementById('criptoactivo-list')) {
                 var cripto = Cryptomaniacos.Elements.CriptoCard(coin.icon, coin.name, coin.websiteUrl, coin.twitterUrl, 
                     coin.id);
 
-                console.log(coin.id);
-
                 fragment.appendChild(cripto);
             });
 
