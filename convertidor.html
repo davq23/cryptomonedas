@@ -29,18 +29,31 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link bi bi-people-fill"  href="index.html"> Nosotros</a>
+                        <a class="nav-link bi bi-people-fill" href="index.html"> Nosotros</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link bi bi-currency-bitcoin"  href="criptoactivos.html"> Criptoactivos</a>
+                        <a class="nav-link bi bi-currency-bitcoin" href="criptoactivos.html"> Criptoactivos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active bi bi-arrows-angle-contract" aria-current="page" href="convertidor.html"> Convertidor</a>
+                        <a class="nav-link active bi bi-arrows-angle-contract" aria-current="page"
+                        href="convertidor.html"> Convertidor</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center position-relative align-items-center w-100">
+        <div class="toast position-absolute" role="alert" aria-live="assertive" id="errorToast" aria-atomic="true">
+            <div class="toast-header">
+                <img src="assets/currency-bitcoin.svg" class="rounded me-2" alt="Bitcoin symbol">
+                <strong class="me-auto">Error</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                No se pudo cargar los resultados, inténtelo más tarde
+            </div>
+        </div>
+    </div>
     <header class="w-100">
         <img class="img-fluid" src="assets/bitcoin-banner2compressed.jpg" alt="Bitcoin digital background">
     </header>
@@ -57,8 +70,9 @@
                     <div class="col">
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="cripto-icon"></span>
-                            <input type="text" class="form-control" disabled id="criptoactivo-input" type="number" aria-label="Amount (to the nearest dollar)">
-                          </div>
+                            <input type="text" class="form-control" disabled id="criptoactivo-input" type="number"
+                                aria-label="Amount (to the nearest dollar)">
+                        </div>
                     </div>
                 </div>
                 <div class="row">
@@ -75,11 +89,13 @@
                     <div class="col">
                         <div class="input-group mb-3">
                             <span class="input-group-text">USD</span>
-                            <input type="text" disabled class="form-control" id="criptoactivo-input-reverse" type="number" aria-label="Amount (to the nearest dollar)">
-                          </div>
+                            <input type="text" disabled class="form-control" id="criptoactivo-input-reverse"
+                                type="number" aria-label="Amount (to the nearest dollar)">
+                        </div>
                     </div>
                     <div class="col text-center">
-                        <h3>Resultado: <span id="resultado-conversion-reverse">0</span> <span id="resultado-symbol"></span></h3>
+                        <h3>Resultado: <span id="resultado-conversion-reverse">0</span> <span
+                                id="resultado-symbol"></span></h3>
                     </div>
                 </div>
             </div>

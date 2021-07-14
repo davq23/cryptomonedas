@@ -82,7 +82,8 @@ if (document.getElementById('criptoactivo-list')) {
         }
 
         getCoins(100, success, function () {
-            
+            Cryptomaniacos.Elements.Toast.show();
+            cryptoList.innerText = '';
         });
     });
 
@@ -119,6 +120,8 @@ if (document.getElementById('criptoactivo-list')) {
 
 
 document.addEventListener('DOMContentLoaded', function (event) {
+    Cryptomaniacos.Elements.Toast = new bootstrap.Toast(document.getElementById('errorToast'));
+
     var fillCoins =  function (coinArray) {
         var fragment = document.createDocumentFragment();
 
@@ -145,6 +148,8 @@ document.addEventListener('DOMContentLoaded', function (event) {
     if (document.getElementById('criptoactivo-select')) 
         getCoins(document.getElementById('criptoactivo-select').value, fillCoins, function(response, status) {
             console.log(status, response);
+
+            Cryptomaniacos.Elements.Toast.show();
         });
 
     if (document.getElementById('criptoactivo-list')) {
@@ -196,8 +201,11 @@ function calculateEventListener() {
         getCurrentPrice(document.getElementById('criptoactivo-select').value, calculateExchange
         , function (response, status) {
             input.disabled = false;
+            inputReverse.disabled = false;
     
             console.log(response, status);
+
+            Cryptomaniacos.Elements.Toast.show();
         })
     }, 300);
 }
@@ -222,6 +230,8 @@ var Cryptomaniacos = {
     },
 
     Elements: {
+        Toast: null,
+
         CriptoCard: function (imgSrc, name, websiteUrl, twitterUrl, idCoin) {
             var cardDiv = document.createElement('div');
             cardDiv.setAttribute('key', idCoin)
