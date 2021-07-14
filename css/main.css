@@ -1,0 +1,41 @@
+.w-15 {
+    width: 15%; 
+}
+
+.w-5 {
+    width: 10%;
+}
+
+@media (max-width: 800px) {
+    .w-15 {
+        min-width: 45%;
+    }
+    .w-5 {
+        min-width: 45%;
+    }
+}
+
+
+.fadeout {
+    animation: fadeout;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+}
+
+.card:hover {
+    background-color: rgba(33, 154, 175, 0.521);
+    cursor: pointer;
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 100%;
+    }
+    to {
+        opacity: 0%;
+    }
+} 
+
+.min-height-15rem {
+    min-height: 15rem;
+}
